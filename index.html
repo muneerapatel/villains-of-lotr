@@ -1,0 +1,1369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Metamorphous&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,700;1,400;1,600&;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Turret+Road:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #FFF8DC;
+      }
+      p {
+        margin: 0%;
+        padding: 0%;
+      }
+
+      h1 {
+        color: black;
+        font-family: "Cinzel Decorative", cursive;
+        font-weight: 700;
+        font-size: 60px;
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 10px;
+      }
+
+      /* Flaired edges, by Tomas Theunissen */
+      hr.flairTop {
+        overflow: visible;
+        height: 30px;
+        border-style: solid;
+        border-color: rgb(0, 0, 0);
+        border-width: 1px 0 0 0;
+        border-radius: 20px;
+        margin-left: 200px;
+        margin-right: 200px;
+      }
+      hr.flairTop:before {
+        display: block;
+        content: "";
+        height: 30px;
+        margin-top: -31px;
+        border-style: solid;
+        border-color: rgb(0, 0, 0);
+        border-width: 0 0 1px 0;
+        border-radius: 20px;
+      }
+
+      h2 {
+        color: black;
+        font-family: "Cinzel Decorative", cursive;
+        font-size: 35px;
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 100px;
+      }
+
+      .context {
+        color: #000000;
+        font-family: "Metamorphous", cursive;
+        font-size: 20px;
+        font-weight: lighter;
+        text-align: center;
+        margin: 50px;
+      }
+
+      h3 {
+        color: black;
+        font-family: "Metamorphous", cursive;
+        font-size: 45px;
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 80px;
+      }
+
+      /* cards */
+      .gridCards {
+        margin: 10px auto;
+        width: min(90%);
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        row-gap: 80px;
+      }
+
+      .card1 {
+        width: 350px;
+        height: 600px;
+        border-radius: 1px;
+        background: #b1726e;
+        border: solid #7C0A02 12px;
+        border-radius: 1px;
+        margin: auto;
+        box-shadow: -4px 9px 15px 0px rgba(0, 0, 0, 0.87);
+      }
+
+      .villain1 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 40px;
+        font-weight: 1600;
+        color: rgb(0, 0, 0);
+        text-align: left;
+        padding: 10px 20px 0px;
+      }
+
+     hr.titleCard1 {
+        border-color: #7C0A02;
+        margin: 0px 12px 10px;
+      }
+
+      img {
+        width: inherit;
+      }
+      .imageVillain1 img {
+        width: 300px;
+        height: 150px;
+        object-fit: cover;
+        border: outset #7C0A02;
+        border-radius: 3px;
+        margin: 10px 15px 5px;
+      }
+
+      .quote1 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 18px;
+        color: black;
+        font-weight: 700;
+        font-style: italic;
+        text-align: center;
+        padding: 0px;
+        margin: 0px 15px 15px;
+      }
+
+      /* Flaired edges, by Tomas Theunissen */
+      hr.separator1 {
+        overflow: visible;
+        height: 30px;
+        border-style: solid;
+        border-color: rgb(255, 215, 0);
+        border-width: 1px 0 0 0;
+        border-radius: 20px;
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-bottom: -15px;
+      }
+      hr.separator1:before {
+        display: block;
+        content: "";
+        height: 30px;
+        border-style: solid;
+        border-color: rgb(255, 215, 0);
+        border-width: 0 0 1px 0;
+        border-radius: 20px;
+        margin-top: -31px;
+        margin-bottom: 0px;
+      }
+
+      .summaryCard1 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 16px;
+        font-weight: 1, 400;
+        color: rgb(0, 0, 0);
+        text-align: justify;
+        padding: 0px;
+        margin: 0px 30px 33px;
+      }
+
+      .powersCard1 {
+        font-family: "Turret Road", cursive;
+        font-size: 15px;
+        font-weight: 500;
+        color: rgb(0, 0, 0);
+        background: #DCDCDC;
+        border: groove #7C0A02;
+        border-width: 5px;
+        padding: 15px 7px 15px;
+        margin: 13px 15px 0px;
+      }
+
+      span.cardSection {
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+      }
+
+      .card2 {
+        width: 350px;
+        height: 600px;
+        border-radius: 1px;
+        background: #bfb385;
+        border: solid #745604 12px;
+        border-radius: 1px;
+        margin: auto;
+        box-shadow: -4px 9px 15px 0px rgba(0, 0, 0, 0.87);
+      }
+
+      .villain2 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 40px;
+        font-weight:700;
+        color: rgb(0, 0, 0);
+        text-align: left;
+        padding: 10px 20px 0px;
+      }
+
+      hr.titleCard2 {
+        border-color: #745604;
+        margin: 0px 12px 10px;
+      }
+
+      img {
+        width: inherit;
+      }
+      .imageVillain2 img {
+        width: 300px;
+        height: 150px;
+        object-fit: cover;
+        border: outset #745604;
+        border-radius: 3px;
+        margin: 10px 15px 5px;
+      }
+
+      .quote2 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 18px;
+        color: black;
+        font-weight: 700;
+        font-style: italic;
+        text-align: center;
+        padding: 0px;
+        margin: 0px 15px 15px;
+      }
+
+      /* Flaired edges, by Tomas Theunissen */
+      hr.separator2 {
+        overflow: visible;
+        height: 30px;
+        border-style: solid;
+        border-color: rgb(255, 215, 0);
+        border-width: 1px 0 0 0;
+        border-radius: 20px;
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-bottom: -15px;
+      }
+      hr.separator2:before {
+        display: block;
+        content: "";
+        height: 30px;
+        border-style: solid;
+        border-color: rgb(255, 215, 0);
+        border-width: 0 0 1px 0;
+        border-radius: 20px;
+        margin-top: -31px;
+        margin-bottom: 0px;
+      }
+
+      .summaryCard2 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 16px;
+        font-weight: 1, 400;
+        color: rgb(0, 0, 0);
+        text-align: justify;
+        padding: 0px;
+        margin: 0px 30px 13px;
+      }
+
+      .powersCard2 {
+        font-family: "Turret Road", cursive;
+        font-size: 15px;
+        font-weight: 500;
+        color: rgb(0, 0, 0);
+        background:#DCDCDC;
+        border: groove #745604;
+        border-width: 5px;
+        padding: 7px;
+        margin: 15px 15px 0px;
+      }
+
+      .card3 {
+        width: 350px;
+        height: 600px;
+        border-radius: 1px;
+        background: #86ac80;
+        border: solid #00563B 12px;
+        border-radius: 1px;
+        margin: auto;
+        box-shadow: -4px 9px 15px 0px rgba(0, 0, 0, 0.87);
+      }
+
+      .villain3 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 40px;
+        font-weight: 1600;
+        color: #000000;
+        text-align: left;
+        padding: 10px 20px 0px;
+      }
+
+      hr.titleCard3 {
+        border-color: #00563B;
+        margin: 0px 12px 10px;
+      }
+
+      img {
+        width: inherit;
+      }
+      .imageVillain3 img {
+        width: 300px;
+        height: 150px;
+        object-fit: cover;
+        border: outset #00563B;
+        border-radius: 3px;
+        margin: 10px 15px 5px;
+      }
+
+      .quote3 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 18px;
+        color: black;
+        font-weight: 700;
+        font-style: italic;
+        text-align: center;
+        padding: 0px;
+        margin: 0px 15px 15px;
+      }
+
+      /* Flaired edges, by Tomas Theunissen */
+      hr.separator3 {
+        overflow: visible;
+        height: 30px;
+        border-style: solid;
+        border-color: rgb(255, 215, 0);
+        border-width: 1px 0 0 0;
+        border-radius: 20px;
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-bottom: -15px;
+      }
+      hr.separator3:before {
+        display: block;
+        content: "";
+        height: 30px;
+        border-style: solid;
+        border-color: rgb(255, 215, 0);
+        border-width: 0 0 1px 0;
+        border-radius: 20px;
+        margin-top: -31px;
+        margin-bottom: 0px;
+      }
+
+      .summaryCard3 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 16px;
+        font-weight: 1, 400;
+        color: rgb(0, 0, 0);
+        text-align: justify;
+        padding: 0px;
+        margin: 0px 30px 13px;
+      }
+
+      .powersCard3 {
+        font-family: "Turret Road", cursive;
+        font-size: 15px;
+        font-weight: 500;
+        color: rgb(0, 0, 0);
+        background: #DCDCDC;
+        border: groove #00563B;
+        border-width: 5px;
+        padding: 7px;
+        margin: 14px 15px 0px;
+      }
+
+      .card4 {
+        width: 350px;
+        height: 600px;
+        border-radius: 1px;
+        background: #768db7;
+        border: solid #0039a6 12px;
+        border-radius: 1px;
+        margin: auto;
+        box-shadow: -4px 9px 15px 0px rgba(0, 0, 0, 0.87);
+      }
+
+      .villain4 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 40px;
+        font-weight: 1600;
+        color: rgb(0, 0, 0);
+        text-align: left;
+        padding: 10px 20px 0px;
+      }
+
+      hr.titleCard4 {
+        border-color: #0039a6;
+        margin: 0px 12px 10px;
+      }
+
+      img {
+        width: inherit;
+      }
+      .imageVillain4 img {
+        width: 300px;
+        height: 150px;
+        object-fit: cover;
+        border: outset #0039a6;
+        border-radius: 3px;
+        margin: 10px 15px 5px;
+      }
+
+      .quote4 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 18px;
+        color: black;
+        font-weight: 700;
+        font-style: italic;
+        text-align: center;
+        padding: 0px;
+        margin: 0px 15px 15px;
+      }
+
+      /* Flaired edges, by Tomas Theunissen */
+      hr.separator4 {
+        overflow: visible;
+        height: 30px;
+        border-style: solid;
+        border-color: rgb(255, 215, 0);
+        border-width: 1px 0 0 0;
+        border-radius: 20px;
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-bottom: -15px;
+      }
+      hr.separator4:before {
+        display: block;
+        content: "";
+        height: 30px;
+        border-style: solid;
+        border-color: rgb(255, 215, 0);
+        border-width: 0 0 1px 0;
+        border-radius: 20px;
+        margin-top: -31px;
+        margin-bottom: 0px;
+      }
+
+      .summaryCard4 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 16px;
+        font-weight: 1, 400;
+        color: rgb(0, 0, 0);
+        text-align: justify;
+        padding: 0px;
+        margin: 5px 30px 30px;
+      }
+
+      .powersCard4 {
+        font-family: "Turret Road", cursive;
+        font-size: 15px;
+        font-weight: 500;
+        color: rgb(0, 0, 0);
+        background: #DCDCDC;
+        border: groove #0039a6;
+        border-width: 5px;
+        padding: 15px 7px 15px;
+        margin: 15px 15px 0px;
+      }
+
+      .card5 {
+        width: 350px;
+        height: 600px;
+        border-radius: 1px;
+        background: #967cab;
+        border: solid #452c63 12px;
+        border-radius: 1px;
+        margin: auto;
+        box-shadow: -4px 9px 15px 0px rgba(0, 0, 0, 0.87);
+      }
+
+      .villain5 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 25px;
+        font-weight: 1600;
+        color: rgb(0, 0, 0);
+        text-align: left;
+        padding: 2px 20px 0px;
+      }
+
+      hr.titleCard5 {
+        border-color: #452c63;
+        margin: 0px 12px 8px;
+      }
+
+      img {
+        width: inherit;
+      }
+      .imageVillain5 img {
+        width: 300px;
+        height: 150px;
+        object-fit: cover;
+        border: outset #452c63;
+        border-radius: 3px;
+        margin: 10px 15px 5px;
+      }
+
+      .quote5 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 18px;
+        color: black;
+        font-weight: 1, 400;
+        font-style: italic;
+        text-align: center;
+        padding: 0px;
+        margin: 0px 15px 15px;
+      }
+
+      /* Flaired edges, by Tomas Theunissen */
+      hr.separator5 {
+        overflow: visible;
+        height: 30px;
+        border-style: solid;
+        border-color: rgb(255, 215, 0);
+        border-width: 1px 0 0 0;
+        border-radius: 20px;
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-bottom: -15px;
+      }
+      hr.separator5:before {
+        display: block;
+        content: "";
+        height: 30px;
+        border-style: solid;
+        border-color: rgb(255, 215, 0);
+        border-width: 0 0 1px 0;
+        border-radius: 20px;
+        margin-top: -31px;
+        margin-bottom: 0px;
+      }
+
+      .summaryCard5 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 16px;
+        font-weight: 1, 400;
+        color: rgb(0, 0, 0);
+        text-align: justify;
+        padding: 0px;
+        margin: 5px 30px 30px;
+      }
+
+      .powersCard5 {
+        font-family: "Turret Road", cursive;
+        font-size: 15px;
+        font-weight: 500;
+        color: rgb(0, 0, 0);
+        background: #DCDCDC;
+        border: groove #452c63;
+        border-width: 5px;
+        padding: 7px;
+        margin: 10px 15px 0px;
+      }
+
+      .card6 {
+        width: 350px;
+        height: 600px;
+        border-radius: 1px;
+        background: #db937a;
+        border: solid #be4113 12px;
+        border-radius: 1px;
+        margin: auto;
+        box-shadow: -4px 9px 15px 0px rgba(0, 0, 0, 0.87);
+      }
+
+      .villain6 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 40px;
+        font-weight: 1600;
+        color: rgb(0, 0, 0);
+        text-align: left;
+        padding: 10px 20px 0px;
+      }
+
+      hr.titleCard6 {
+        border-color: #be4113;
+        margin: 0px 12px 10px;
+      }
+
+      img {
+        width: inherit;
+      }
+      .imageVillain6 img {
+        width: 300px;
+        height: 150px;
+        object-fit: cover;
+        border: outset #be4113;
+        border-radius: 3px;
+        margin: 10px 15px 5px;
+      }
+
+      .quote6 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 15px;
+        color: black;
+        font-weight: 1, 400;
+        font-style: italic;
+        text-align: center;
+        padding: 0px;
+        margin: 0px 15px 15px;
+      }
+
+      /* Flaired edges, by Tomas Theunissen */
+      hr.separator6 {
+        overflow: visible;
+        height: 30px;
+        border-style: solid;
+        border-color: rgb(255, 215, 0);
+        border-width: 1px 0 0 0;
+        border-radius: 20px;
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-bottom: -15px;
+      }
+      hr.separator6:before {
+        display: block;
+        content: "";
+        height: 30px;
+        border-style: solid;
+        border-color: rgb(255, 215, 0);
+        border-width: 0 0 1px 0;
+        border-radius: 20px;
+        margin-top: -31px;
+        margin-bottom: 0px;
+      }
+
+      .summaryCard6 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 16px;
+        font-weight: 1, 400;
+        color: rgb(0, 0, 0);
+        text-align: justify;
+        padding: 0px;
+        margin: 5px 30px 52px;
+      }
+
+      .powersCard6 {
+        font-family: "Turret Road", cursive;
+        font-size: 15px;
+        font-weight: 500;
+        color: rgb(0, 0, 0);
+        background: #DCDCDC;
+        border: groove #be4113;
+        border-width: 5px;
+        padding: 20px 7px 28px;
+        margin: 15px 15px 0px;
+      }
+
+      .card7 {
+        width: 350px;
+        height: 600px;
+        border-radius: 1px;
+        background: #bfb385;
+        border: solid #745604 12px;
+        border-radius: 1px;
+        margin: auto;
+        box-shadow: -4px 9px 15px 0px rgba(0, 0, 0, 0.87);
+      }
+
+      .villain7 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 40px;
+        font-weight: 1600;
+        color: rgb(0, 0, 0);
+        text-align: left;
+        padding: 10px 20px 0px;
+      }
+
+      hr.titleCard7 {
+        border-color: #745604;
+        margin: 0px 12px 10px;
+      }
+
+      img {
+        width: inherit;
+      }
+      .imageVillain7 img {
+        width: 300px;
+        height: 150px;
+        object-fit: cover;
+        border: outset #745604;
+        border-radius: 3px;
+        margin: 10px 15px 5px;
+      }
+
+      .quote7 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 18px;
+        color: black;
+        font-weight: 1, 400;
+        font-style: italic;
+        text-align: center;
+        padding: 0px;
+        margin: 2px 15px 21px;
+      }
+
+      /* Flaired edges, by Tomas Theunissen */
+      hr.separator7 {
+        overflow: visible;
+        height: 30px;
+        border-style: solid;
+        border-color: rgb(255, 215, 0);
+        border-width: 1px 0 0 0;
+        border-radius: 20px;
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-bottom: -15px;
+      }
+      hr.separator7:before {
+        display: block;
+        content: "";
+        height: 30px;
+        border-style: solid;
+        border-color: rgb(255, 215, 0);
+        border-width: 0 0 1px 0;
+        border-radius: 20px;
+        margin-top: -31px;
+        margin-bottom: 0px;
+      }
+
+      .summaryCard7 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 16px;
+        font-weight: 1, 400;
+        color: rgb(0, 0, 0);
+        text-align: justify;
+        padding: 0px;
+        margin: 5px 30px 25px;
+      }
+
+      .powersCard7 {
+        font-family: "Turret Road", cursive;
+        font-size: 15px;
+        font-weight: 500;
+        color: rgb(0, 0, 0);
+        background: #DCDCDC;
+        border: groove #745604;
+        border-width: 5px;
+        padding: 15px 7px 15px;
+        margin: 13px 15px 0px;
+      }
+
+      .card8 {
+        width: 350px;
+        height: 600px;
+        border-radius: 1px;
+        background: #b1726e;
+        border: solid #7C0A02 12px;
+        border-radius: 1px;
+         margin: auto;
+        box-shadow: -4px 9px 15px 0px rgba(0, 0, 0, 0.87);
+      }
+
+      .villain8 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 25px;
+        font-weight: 1600;
+        color: rgb(0, 0, 0);
+        text-align: left;
+        padding: 2px 20px 0px;
+      }
+
+      hr.titleCard8 {
+        border-color: #7C0A02;
+        margin: 0px 12px 10px;
+      }
+
+      img {
+        width: inherit;
+      }
+      .imageVillain8 img {
+        width: 300px;
+        height: 150px;
+        object-fit: cover;
+        border: outset #7C0A02;
+        border-radius: 3px;
+        margin: 7px 15px 5px;
+      }
+
+      .quote8 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 15px;
+        color: black;
+        font-weight: 1, 400;
+        font-style: italic;
+        text-align: center;
+        padding: 0px;
+        margin: 0px 15px 0px;
+      }
+
+      /* Flaired edges, by Tomas Theunissen */
+      hr.separator8 {
+        overflow: visible;
+        height: 30px;
+        border-style: solid;
+        border-color: rgb(255, 215, 0);
+        border-width: 1px 0 0 0;
+        border-radius: 20px;
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-bottom: -15px;
+      }
+      hr.separator8:before {
+        display: block;
+        content: "";
+        height: 30px;
+        border-style: solid;
+        border-color: rgb(255, 215, 0);
+        border-width: 0 0 1px 0;
+        border-radius: 20px;
+        margin-top: -31px;
+        margin-bottom: 0px;
+      }
+
+      .summaryCard8 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 16px;
+        font-weight: 1, 400;
+        color: rgb(0, 0, 0);
+        text-align: justify;
+        padding: 0px;
+        margin: 0px 30px 25px;
+      }
+
+      .powersCard8 {
+        font-family: "Turret Road", cursive;
+        font-size: 15px;
+        font-weight: 500;
+        color: rgb(0, 0, 0);
+        background: #DCDCDC;
+        border: groove #7C0A02;
+        border-width: 5px;
+        padding: 20px 7px 28px;
+        margin: 15px 15px 0px;
+      }
+
+      .card9 {
+        width: 350px;
+        height: 600px;
+        border-radius: 1px;
+        background: #768db7;
+        border: solid #0039a6 12px;
+        border-radius: 1px;
+        margin: auto;
+        box-shadow: -4px 9px 15px 0px rgba(0, 0, 0, 0.87);
+      }
+
+      .villain9 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 40px;
+        font-weight: 1600;
+        color: rgb(0, 0, 0);
+        text-align: left;
+        padding: 10px 20px 0px;
+      }
+
+      hr.titleCard9 {
+        border-color: #0039a6;
+        margin: 0px 12px 10px;
+      }
+
+      img {
+        width: inherit;
+      }
+      .imageVillain9 img {
+        width: 300px;
+        height: 150px;
+        object-fit: cover;
+        border: outset #0039a6;
+        border-radius: 3px;
+        margin: 10px 15px 5px;
+      }
+
+      .quote9 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 15px;
+        color: black;
+        font-weight: 1, 400;
+        font-style: italic;
+        text-align: center;
+        padding: 0px;
+        margin: 0px 15px 0px;
+      }
+
+      /* Flaired edges, by Tomas Theunissen */
+      hr.separator9 {
+        overflow: visible;
+        height: 30px;
+        border-style: solid;
+        border-color: rgb(255, 215, 0);
+        border-width: 1px 0 0 0;
+        border-radius: 20px;
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-bottom: -15px;
+      }
+      hr.separator9:before {
+        display: block;
+        content: "";
+        height: 30px;
+        border-style: solid;
+        border-color: rgb(255, 215, 0);
+        border-width: 0 0 1px 0;
+        border-radius: 20px;
+        margin-top: -31px;
+        margin-bottom: 0px;
+      }
+
+      .summaryCard9 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 16px;
+        font-weight: 1, 400;
+        color: rgb(0, 0, 0);
+        text-align: justify;
+        padding: 0px;
+        margin: 5px 30px 25px;
+      }
+
+      .powersCard9 {
+        font-family: "Turret Road", cursive;
+        font-size: 15px;
+        font-weight: 500;
+        color: rgb(0, 0, 0);
+        background: #DCDCDC;
+        border: groove #0039a6;
+        border-width: 5px;
+        padding: 20px 7px 28px;
+        margin: 10px 15px 0px;
+      }
+
+      h4 {
+        color: black;
+        font-family: "Metamorphous", cursive;
+        font-size: 23px;
+        text-align: center;
+        margin: 85px 0px 20px;
+      }
+
+      .wrapper {
+        text-align: center;
+        margin: 50px;
+      }
+      .button {
+        background: rgb(0,0,0);
+        background: linear-gradient(98deg, rgba(0,0,0,1) 0%, rgba(99,42,10,1) 88%);     
+        color: white;
+        font-family: "Metamorphous", cursive;
+        font-size: 40px;
+        font-weight: 700;
+        text-align: center;
+        padding: 15px 30px;
+        border: solid 5px black;
+        border-radius: 7px;
+        margin: auto;
+        box-shadow: 0px 10px 13px -7px #000000, 0px 16px 36px 9px rgba(0,0,0,0.52);
+        transition-duration: .8s;
+        cursor: pointer;
+      }
+      .button:hover {
+        background: rgb(227,217,217);
+        background: linear-gradient(98deg, rgba(227,217,217,1) 9%, rgba(128,51,14,1) 93%);
+        color: black;
+       }
+
+      /* Flaired edges, by Tomas Theunissen */
+      hr.flairBottom {
+        overflow: visible;
+        height: 30px;
+        border-style: solid;
+        border-color: rgb(0, 0, 0);
+        border-width: 1px 0 0 0;
+        border-radius: 20px;
+        margin-left: 200px;
+        margin-right: 200px;
+      }
+      hr.flairBottom:before {
+        display: block;
+        content: "";
+        height: 30px;
+        margin-top: -31px;
+        border-style: solid;
+        border-color: rgb(0, 0, 0);
+        border-width: 0 0 1px 0;
+        border-radius: 20px;
+      }
+
+      .linkBottom {
+        font-family: "Metamorphous", cursive;
+        font-size: 15px;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      a {
+        font-family: "Metamorphous", cursive;
+        padding: 10px;
+        color: rgb(0, 0, 0);
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>A DESOLATE MIDDLE EARTH</h1>
+    <h2>ONE RING TO RULE THEM ALL</h2>
+    <div class="context">
+      In 3018 T.A, four Hobbits, two Men, one Elf, one Dwarf and a Wizard form
+      the Fellowship of the Ring; a legendary alliance to save Middle Earth.
+      They take on the daunting task to cast the One Ring into the fires of
+      Mount Doom. The group meets wildly vicious and powerful adversaries on
+      their perilous journey and must defeat them to complete their mission.
+    </div>
+    <hr class="flairTop" />
+    <h3>The Scourge of Middle Earth</h3>
+    <div class="gridCards">
+      <div class="card1">
+        <div class="villain1">
+          <p>SAURON</p>
+        </div>
+        <hr class="titleCard1" />
+        <div class="imageVillain1">
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/036/518/original/sauroncard.jpg?1654551906"
+          />
+        </div>
+        <div class="quote1">
+          <p>"You cannot hide. I see you."</p>
+        </div>
+        <hr class="separator1" />
+        <div class="summaryCard1">
+          The second Dark Lord of Midde Earth, who forged the One Ring with part
+          of his soul. His goal is to reclaim the One Ring and rule over all of
+          Arda in darkness.
+        </div>
+        <hr class="separator1" />
+        <div class="powersCard1">
+          <p><span class="cardSection">Species: </span>maia, ainur</p>
+          <br />
+          <p>
+            <span class="cardSection"> Powers: </span>superhuman strength,
+            master of dark magic, world manipulation, master of deception and
+            shapeshifting
+          </p>
+        </div>
+      </div>
+      <!-- card 2 -->
+      <div class="card2">
+        <div class="villain2">
+          <p>SARUMAN</p>
+        </div>
+        <hr class="titleCard2" />
+        <div class="imageVillain2">
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/036/519/original/sarumancard.jpg?1654551914"
+          />
+        </div>
+        <div class="quote2">
+          <p>"So you have chosen ... death."</p>
+        </div>
+        <hr class="separator2" />
+        <div class="summaryCard2">
+          An extremely powerful wizard and leader of the Istari, who commands
+          Isengard and breeds the destructive Uruk-hai. His goal is to supplant
+          Sauron, and destroy the Race of Men.
+        </div>
+        <hr class="separator2" />
+        <div class="powersCard2">
+          <p><span class="cardSection">Species: </span>maia, ainur</p>
+          <br />
+          <p>
+            <span class="cardSection"> Powers: </span> speech, immense magical
+            powers, wizard staff, spell-casting, energy blasts, telekinesis,
+            pyrokinesis, high intelligence, manipulation
+          </p>
+        </div>
+      </div>
+      <!-- card 3 -->
+      <div class="card3">
+        <div class="villain3">
+          <p>GOLLUM</p>
+        </div>
+        <hr class="titleCard3" />
+        <div class="imageVillain3">
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/036/520/original/gollum.jpeg?1654551924"
+          />
+        </div>
+        <div class="quote3">
+          <p>"My precious."</p>
+        </div>
+        <hr class="separator3" />
+        <div class="summaryCard3">
+          A former Hobbit who is corrupted and transformed into a slimy and
+          monstrous creature by the One Ring. His goal is to kill anyone who
+          stands in the way between him and the Ring.
+        </div>
+        <hr class="separator3" />
+        <div class="powersCard3">
+          <p><span class="cardSection">Species: </span>hobbit</p>
+          <br />
+          <p>
+            <span class="cardSection"> Powers: </span>trickery, high
+            intelligence, combat prowess, manipulation, vast knowledge of the
+            paths to mordor, agility, fishing
+          </p>
+        </div>
+      </div>
+      <!-- card 4 -->
+      <div class="card4">
+        <div class="villain4">
+          <p>DURIN'S BANE</p>
+        </div>
+        <hr class="titleCard4" />
+        <div class="imageVillain4">
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/036/521/original/durinsbanecard.jpg?1654551940"
+          />
+        </div>
+        <div class="quote4">
+          <p>"This foe is beyond any of you. Run!"</p>
+        </div>
+        <hr class="separator4" />
+        <div class="summaryCard4">
+          A Balrog of Morgoth made out of flames and shadow, hiding in the mines
+          of Moria. His goal is to kill anyone who disturbs him.
+        </div>
+        <hr class="separator4" />
+        <div class="powersCard4">
+          <p><span class="cardSection">Species: </span>maia, balrog</p>
+          <br />
+          <p>
+            <span class="cardSection"> Powers: </span>supernatural physicality,
+            flames of udun, fiery sword, fiery whip, fear stare
+          </p>
+        </div>
+      </div>
+      <!-- card 5 -->
+      <div class="card5">
+        <div class="villain5">
+          <p>WITCH KING OF ANGMAR</p>
+        </div>
+        <hr class="titleCard5" />
+        <div class="imageVillain5">
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/036/522/original/witchkingofangmarcard.jpeg?1654551958"
+          />
+        </div>
+        <div class="quote5">
+          <p>"You fool. No man can kill me. Die now."</p>
+        </div>
+        <hr class="separator5" />
+        <div class="summaryCard5">
+          As the leader of the Nazgûl, he scours Middle-earth looking for the
+          One Ring. His goal is to help Sauron conquer and rule Middle-earth.
+        </div>
+        <hr class="separator5" />
+        <div class="powersCard5">
+          <p><span class="cardSection">Species: </span>man, wraith</p>
+          <br />
+          <p>
+            <span class="cardSection"> Powers: </span>magic and sorcery,
+            necromancy, swordsmanship, morgul blades, strength, flail,
+            fellbeasts, intimidation
+          </p>
+        </div>
+      </div>
+      <!-- card 6 -->
+      <div class="card6">
+        <div class="villain6">
+          <p>SHELOB</p>
+        </div>
+        <hr class="titleCard6" />
+        <div class="imageVillain6">
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/036/523/original/shelobcard.jpg?1654551969"
+          />
+        </div>
+        <div class="quote6">
+          <p>"She only desired death for all others, mind and body."</p>
+        </div>
+        <hr class="separator6" />
+        <div class="summaryCard6">
+          An ugly beast who guards the second entrance to Mordor. Her goal is to
+          kill and devour the Fellowship.
+        </div>
+        <hr class="separator6" />
+        <div class="powersCard6">
+          <p><span class="cardSection">Species: </span>spider</p>
+          <br />
+          <p>
+            <span class="cardSection"> Powers: </span>crush of death, venomous
+            chelicerae, webs, claws, fangs
+          </p>
+        </div>
+      </div>
+      <!-- card 7 -->
+      <div class="card7">
+        <div class="villain7">
+          <p>LURTZ</p>
+        </div>
+        <hr class="titleCard7" />
+        <div class="imageVillain7">
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/036/524/original/lurtzcard.jpeg?1654551980"
+          />
+        </div>
+        <div class="quote7">
+          <p>"Looks like meat's back on the menu boys!"</p>
+        </div>
+        <hr class="separator7" />
+        <div class="summaryCard7">
+          An Uruk-hai commander who fatally strangled the pitmaster that oversaw his rise upon birth. His goal is to kill the Fellowship.
+        </div>
+        <hr class="separator7" />
+        <div class="powersCard7">
+          <p><span class="cardSection">Species: </span>orc; uruk-hai</p>
+          <br />
+          <p>
+            <span class="cardSection"> Powers: </span>combat prowess, brute
+            strength, inhuman durability, capacity for suicidal violence
+          </p>
+        </div>
+      </div>
+      <!-- card 8 -->
+      <div class="card8">
+        <div class="villain8">
+          <p>WATCHER IN THE WATER</p>
+        </div>
+        <hr class="titleCard8" />
+        <div class="imageVillain8">
+          <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/036/525/original/watcherinthewatercard.jpeg?1654551989" />
+        </div>
+        <div class="quote8">
+          <p>
+            "We cannot get out. The end comes, and then drums, drums in the
+            deep."
+          </p>
+        </div>
+        <hr class="separator8" />
+        <div class="summaryCard8">
+          A mysterious and horrifying monster with many tentacles who lives in
+          a dark and still lake near the Westgate of Moria. Its goal is to
+          capture the Fellowship.
+        </div>
+        <hr class="separator8" />
+        <div class="powersCard8">
+          <p><span class="cardSection">Species: </span>unknown</p>
+          <br />
+          <p>
+            <span class="cardSection"> Powers: </span>latching onto prey with
+            strong tentacles
+          </p>
+        </div>
+      </div>
+      <!-- card 9 -->
+      <div class="card9">
+        <div class="villain9">
+          <p>GOTHMOG</p>
+        </div>
+        <hr class="titleCard9" />
+        <div class="imageVillain9">
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/036/526/original/gothmogcard.jpeg?1654551997"
+          />
+        </div>
+        <div class="quote9">
+          <p>"Fear. The city is rank with it! Let us ease their suffering."</p>
+        </div>
+        <hr class="separator9" />
+        <div class="summaryCard9">
+          Sauron's most trusted and loyal lieutenant, who leads the armies of
+          Morder against Minas Tirith. His goal is to demolish Gondor and serve
+          his Master.
+        </div>
+        <hr class="separator9" />
+        <div class="powersCard9">
+          <p><span class="cardSection">Species: </span>orc</p>
+          <br />
+          <p>
+            <span class="cardSection"> Powers: </span>leadership, brute
+            strength, scimitar
+          </p>
+        </div>
+      </div>
+    </div>
+     <h4>
+      <strong><em
+        >Do you have what it takes to save Middle Earth?</em
+      ></strong>
+    </h4>
+    <div class="wrapper">
+<button class="button">ATTACK</button>
+    </div>
+     <hr class="flairBottom" />
+     <div class="linkBottom">
+       <a href="https://lotr.fandom.com/wiki/Main_Page"/" target="_blank" rel="noopener noreferrer">Discover the other inhabitants of Middle Earth</a>
+     </div>
+
+    <script>
+function attack() {
+  let name = prompt("What is your name?");
+  let opponent = prompt("Whom have you chosen as your worthy opponent?");
+  opponent = opponent.toLowerCase();
+  if (opponent === "sauron") {
+    alert(name + " reaches Mordor and throws the One Ring into the Fires of Mount Doom, with the help of Frodo and Sam. The Dark Lord of Middle Earth is defeated.");
+  } else if (opponent === "saruman") {
+    alert("Gandalf knocks away Saruman's staff, leaving him defenseless. " + name + " and Wormtongue finish the job; Saruman dies from a fatal stab wound in the neck.");
+  } else if (opponent === "gollum") {
+    alert(name + " wrestles with Frodo and Gollum for possession of the Ring at the Cracks of Mount Doom. Suddenly Gollum loses his footing, and time seems to slow down as he falls into the fiery depths of Mount Doom taking his Precious with him.");
+  } else if (opponent === "durin's bane") {
+    alert(name + " drops into the gloomy depths of the mines behind Gandalf and the Bane, and a stroke of luck has the three of them falling into a freezing lake. After what feels like eons, " + name + " manages to subdue the Bane with Gandalf's help, sending it tumbling off a mountain peak.");
+  } else if (opponent === "witch king of angmar") {
+    alert("Despite the fear inducing facade the Witch King presents, " + name + " bravely takes him on with the help of his friends on the battleground of the Pelennor Fields. In three quick thrusts, the Witch King is no more: " + name + " stabs one leg, and Merry the other, with Éowyn dealing the final blow to the face.");
+  } else if (opponent === "shelob") {
+    alert("Sam stabs Shelob's eye and injures her leg. An enraged Shelob chases after Sam who dodges her stinger and tosses the sword to " + name + ". " + name + " sinks the sword into the spider and it falls into a lifeless heap.");
+   } else if (opponent === "lurtz") {
+    alert("Wanting to avenge Boromir's death, Aragorn and " + name + " charge at Lurtz. Aragorn manages to sever Lurtz's arm, and " + name + " uses this opportunity to decapitate him.");
+  
+  } else if (opponent === "the watcher in the water") {
+    alert("The Watcher in the Water grabs Frodo and " + name + " , dragging them away. " + name + " stabs it - momentarily stunning it - as Legolas sends an arrow through its eye causing it to drop the two, and retreats back into the water." 
+);
+ 
+  } else if (opponent === "gothmog") {
+    alert("During the fierce battle at Pelennor Fields, Aragorn rushes in and chops off Gothmog's arm, before Gimli strikes him from behind in the torso with his axe, and " + name + " then delivers the final blow to his back, killing him.");
+  } else {
+    alert("You are too powerful. None are worthy!")
+  }
+  }
+
+let attackButton = document.querySelector("button");
+attackButton.addEventListener("click", attack);
+     </script>
+  </body>
+</html>
+
+
